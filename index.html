@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CUTTIME - Your Style, Right On Time" />
+    <title>CUTTIME - Barber Booking App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="logo-section">
+          <img
+            src="attached_assets/06508797-2457-4D60-B50E-C57F76D8F5DD_1754033907509.jpeg"
+            alt="CUTTIME Logo"
+            class="logo"
+          />
+          <h1 class="brand-name">CUTTIME</h1>
+        </div>
+        <nav class="navigation">
+          <a href="index.html" class="nav-btn">Home</a>
+          <a href="Barber-dash.html" class="nav-btn">Barber Dashboard</a>
+          <a href="Customer-dash.html" class="nav-btn">Customer Dashboard</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="container">
+        <!-- Welcome Section -->
+        <div class="main-login-section" id="main-login">
+          <h1 class="welcome-title">Welcome to CUTTIME</h1>
+          <p class="welcome-subtitle">Your Style, Right On Time</p>
+          <button class="main-login-btn" onclick="showLoginOptions()">
+            Login / Register
+          </button>
+        </div>
+
+        <!-- Login Form -->
+        <div class="form-box" id="login-form">
+          <button class="close-btn" onclick="hideLoginOptions()">
+            &times;
+          </button>
+          <form>
+            <h2>Login</h2>
+            <input type="phone" name="phone" placeholder="phone" required />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <a href="#" id="forgot-password-link">Forgot Password?</a>
+            <div id="reset-password-section" style="display: none">
+              <label>Phone Number:</label><br />
+              <input
+                type="text"
+                id="reset-phone"
+                placeholder="Enter your registered phone"
+              /><br /><br />
+
+              <div id="recaptcha-container"></div>
+              <button type="button" id="send-reset-otp-btn">Send OTP</button>
+
+              <div id="reset-otp-section" style="display: none">
+                <label>Enter OTP:</label><br />
+                <input type="text" id="reset-otp" /><br /><br />
+
+                <label>New Password:</label><br />
+                <input type="password" id="new-password" /><br /><br />
+
+                <button id="reset-password-btn">Reset Password</button>
+              </div>
+            </div>
+
+            <button type="submit">Login</button>
+
+            <p>
+              Don't have an account?
+              <a href="#" onclick="showForm('register-form')">Register</a>
+            </p>
+          </form>
+        </div>
+
+        <!-- Register Form -->
+        <div class="form-box" id="register-form">
+          <h2>User Registration</h2>
+          <form>
+            <div class="role-group">
+              <label class="role-label">Role:</label><br />
+
+              <div class="role-options">
+                <label class="role-option">
+                  <input type="radio" name="role" value="customer" checked />
+                  Customer
+                </label>
+
+                <label class="role-option">
+                  <input type="radio" name="role" value="shop" />
+                  Shop
+                </label>
+              </div>
+            </div>
+
+            <label>Name:</label><br />
+            <input type="text" id="name" required /><br /><br />
+
+            <label>Pincode:</label><br />
+            <input type="text" id="pincode" required /><br /><br />
+
+            <label>Phone Number:</label><br />
+            <input
+              type="text"
+              id="phone"
+              placeholder="10-digit number"
+            /><br /><br />
+
+            <div id="recaptcha-container-reset"></div>
+
+            <button type="button" id="send-otp-btn">Send OTP</button>
+          </form>
+
+          <div id="otp-section" style="display: none">
+            <br />
+            <label>Enter OTP:</label><br />
+            <input type="text" id="otp" /><br /><br />
+
+            <label>Create Password:</label><br />
+            <input
+              type="password"
+              id="password"
+              placeholder="Choose a strong password"
+            /><br /><br />
+
+            <button id="register-btn">Submit & Register</button>
+          </div>
+        </div>
+
+        <!-- Features Section (Box 1, Box 2, Box 3) -->
+        <div class="features-row">
+          <div class="feature-box">
+            <h3>Easy Booking</h3>
+            <p>
+              Book appointments quickly with your favorite barber, all in a few
+              clicks.
+            </p>
+          </div>
+          <div class="feature-box">
+            <h3>Customer Dashboard</h3>
+            <p>
+              Track your bookings by live-queue , Book appointments in the
+              favourite shops where you want, and enjoy your time .
+            </p>
+          </div>
+          <div class="feature-box">
+            <h3>Barber Dashboard</h3>
+            <p>
+              Barbers can manage schedules, accept bookings, and connect with
+              clients.
+            </p>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="footer-main">
+            <div class="footer-brand">
+              <img
+                src="attached_assets/06508797-2457-4D60-B50E-C57F76D8F5DD_1754033907509.jpeg"
+                alt="CUTTIME Logo"
+                class="footer-logo"
+              />
+              <span class="footer-title">CUTTIME</span>
+              <span class="footer-tagline">Your Style, Right On Time</span>
+            </div>
+            <div class="footer-links">
+              <a href="#">Home</a>
+              <a href="#">Barber Dashboard</a>
+              <a href="#">User Dashboard</a>
+              <a href="#">Book Appointment</a>
+              <a href="#">Support</a>
+            </div>
+            <div class="footer-site-details">
+              <p>
+                CUTTIME is India's leading barber booking app, connecting users
+                with top local barbers for easy, stylish, and timely grooming.
+                <br />Secure bookings, personal dashboards, and a seamless
+                mobile experience—where style meets convenience.
+              </p>
+            </div>
+            <div class="footer-social">
+              <span>Stay connected:</span>
+              <a
+                href="https://www.instagram.com/yourusername"
+                target="_blank"
+                title="Instagram"
+                aria-label="Instagram"
+              >
+                <!-- Instagram SVG -->
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="#E4405F"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.75 2C5.13 2 2.99 4.13 2.99 6.75v10.5C2.99 19.87 5.13 22 7.75 22h8.5c2.62 0 4.75-2.13 4.75-4.75V6.75C21 4.13 18.87 2 16.25 2h-8.5zm0 1.5h8.5c1.79 0 3.25 1.46 3.25 3.25v10.5c0 1.79-1.46 3.25-3.25 3.25h-8.5A3.25 3.25 0 014.5 14.25V6.75A3.25 3.25 0 017.75 3.5zm8.25 2.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zm-4 1.25A5.5 5.5 0 1112 18.5a5.5 5.5 0 010-11zm0 1.5a4 4 0 100 8 4 4 0 000-8z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="https://twitter.com/yourusername"
+                target="_blank"
+                title="Twitter/X"
+                aria-label="Twitter"
+              >
+                <!-- Twitter SVG -->
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="#1DA1F2"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.633 7.997c.013.177.013.354.013.532 0 5.387-4.1 11.609-11.609 11.609-2.305 0-4.449-.672-6.25-1.822.324.038.635.051.972.051 1.917 0 3.683-.65 5.087-1.757a4.11 4.11 0 01-3.841-2.856c.251.038.502.063.79.063.369 0 .75-.05 1.101-.139A4.107 4.107 0 012.82 8.29v-.051a4.128 4.128 0 001.857.516A4.108 4.108 0 013.46 4.687a11.64 11.64 0 008.456 4.287 4.648 4.648 0 01-.102-.941A4.106 4.106 0 0116.226 4a8.2 8.2 0 002.604-.992 4.093 4.093 0 01-1.802 2.273c.81-.101 1.573-.313 2.28-.635a8.725 8.725 0 01-2.075 2.351z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.facebook.com/yourusername"
+                target="_blank"
+                title="Facebook"
+                aria-label="Facebook"
+              >
+                <!-- Facebook SVG -->
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="#1877F3"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.675 0h-21.35A1.327 1.327 0 000 1.326v21.348A1.327 1.327 0 001.325 24h11.495v-9.293h-3.122V11.01h3.122V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24h-1.918c-1.504 0-1.797.716-1.797 1.763v2.315h3.587l-.467 3.697h-3.12V24h6.116A1.327 1.327 0 0024 22.674V1.326A1.327 1.327 0 0022.675 0"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://wa.me/919999999999"
+                target="_blank"
+                title="WhatsApp"
+                aria-label="WhatsApp"
+              >
+                <!-- WhatsApp SVG -->
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="#25D366"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.1-.472-.149-.672.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.019-.458.13-.606.134-.134.298-.348.447-.522.149-.175.199-.298.298-.497.099-.198.05-.372-.024-.522-.075-.149-.672-1.611-.921-2.208-.242-.579-.487-.5-.672-.509l-.57-.01c-.196 0-.515.074-.784.372-.268.297-1.02 1-.989 2.393.004.657.227 1.286.367 1.549a6.554 6.554 0 001.436 1.974c.615.579 1.225 1.148 1.782 1.353.557.205 1.066.197 1.462.12.447-.09 1.357-.555 1.548-1.067.192-.511.192-.956.137-1.018zM12.004 2c5.514 0 10 4.486 10 10 0 1.653-.402 3.209-1.125 4.584l1.105 4.045a1 1 0 01-1.254 1.254l-4.045-1.105a9.96 9.96 0 01-4.681 1.18c-5.514 0-10-4.486-10-10S6.49 2 12.004 2zm0-2C5.373 0 0 5.373 0 12c0 1.991.522 3.864 1.45 5.488l-1.366 5.001A3 3 0 003.51 24l5-1.366A11.948 11.948 0 0012.004 24c6.627 0 12-5.373 12-12S18.631 0 12.004 0z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <span>&copy; 2025 CUTTIME. All rights reserved.</span>
+            <span>Made with ❤️ in India</span>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Firebase App (core SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+
+    <!-- Firebase Auth -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AlzaSyA4kXzKUZk3WAXcV50pIL0r3PLG0__VIDM",
+        authDomain: "ipad-test-875b9.firebaseapp.com",
+        projectId: "ipad-test-875b9",
+        storageBucket: "ipad-test-875b9.appspot.com",
+        messagingSenderId: "819797494828",
+        appId: "1:819797494828:web:6119b86b676cc9f9d45589", // 👈 Get from Your Apps section
+      };
+
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
